@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_add"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_launcher_foreground"
+        android:background="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:id="@+id/set_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorLoginRegisterText"
+        android:inputType="textPersonName"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/title"
+        android:textColor="@color/colorLoginRegisterText"
+        android:textColorHint="@color/colorLoginRegisterText"
+        android:textColorLink="@color/colorLoginRegisterText"
+        android:textCursorDrawable="@null"
+        android:textSize="21sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_add" />
+
+    <EditText
+        android:id="@+id/set_short_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorLoginRegisterText"
+        android:inputType="textEmailAddress"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/short_description"
+        android:textColor="@color/colorLoginRegisterText"
+        android:textColorHint="@color/colorLoginRegisterText"
+        android:textColorLink="@color/colorLoginRegisterText"
+        android:textCursorDrawable="@null"
+        android:textSize="21sp"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/set_title"/>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/title_add"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/set_short_description" />
+
+</android.support.constraint.ConstraintLayout>

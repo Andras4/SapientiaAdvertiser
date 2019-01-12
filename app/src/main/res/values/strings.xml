@@ -1,0 +1,32 @@
+<resources>
+    <!--app name and bottom navigation icon names-->
+    <string name="app_name">Sapientia Advertiser</string>
+    <string name="title_add">Add</string>
+    <string name="title_home">Home</string>
+    <string name="title_settings">Settings</string>
+
+    <!--no connection warning layout-->
+    <string name="no_network">No Internet connection. Make sure that Wi-Fi or cellular mobile data is turned on, then come back.</string>
+    <string name="exit_button_text">EXIT</string>
+
+    <!--login-->
+    <string name="number">+4</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="send_code">Send Code</string>
+    <string name="enter_code_received">Enter code received</string>
+    <string name="verify_sign_in">Verify and Sign In</string>
+    <string name="login_sign_up">Do you have an account? If not Sign Up</string>
+
+    <!--settings-->
+    <string name="sign_out">Sign Out</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="save">Save</string>
+
+    <!--add-->
+    <string name="title">Title</string>
+    <string name="short_description">Short description</string>
+
+</resources>

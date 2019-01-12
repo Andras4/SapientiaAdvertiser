@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_parent_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/sapilogo"
+        android:layout_width="207dp"
+        android:layout_height="166dp"
+        android:src="@drawable/ic_sapi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/app_name"
+        android:textColor="@color/colorLoginRegisterText"
+        android:textSize="31sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sapilogo" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/appname"
+        app:layout_constraintBottom_toTopOf="@+id/send_code_button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorLoginRegisterText"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/number"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toStartOf="@+id/login_phone_number" />
+
+        <EditText
+            android:id="@+id/login_phone_number"
+            android:layout_width="238dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorLoginRegisterText"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:textColor="@color/colorLoginRegisterText"
+            android:textColorHint="@color/colorLoginRegisterText"
+            android:textColorLink="@color/colorLoginRegisterText"
+            android:textCursorDrawable="@null"
+            android:textSize="21sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send_code_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_id"
+        android:textStyle="bold"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/send_code"
+        android:textColor="@color/colorPrimary" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/sign_up"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/login_sign_up"-->
+    <!--android:textColor="@color/colorButton"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintHorizontal_bias="0.695"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/send_code_buttontton" />-->
+
+    <EditText
+        android:id="@+id/editTextEnterCode"
+        android:layout_width="301dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/colorLoginRegisterText"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/enter_code_received"
+        android:textColor="@color/colorLoginRegisterText"
+        android:textColorHint="@color/colorLoginRegisterText"
+        android:textColorLink="@color/colorLoginRegisterText"
+        android:textCursorDrawable="@null"
+        android:textSize="21sp"
+        android:inputType="text"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/send_code_button" />
+
+    <Button
+        android:id="@+id/button_verify"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/verify_sign_in"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEnterCode" />
+
+</android.support.constraint.ConstraintLayout>
