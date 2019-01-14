@@ -40,6 +40,24 @@ public class AddActivity extends Fragment implements View.OnClickListener {
     DatabaseReference myRef = database.getReference("users");
     private StorageReference mStorageRef;
 
+    private static final int PICK_IMAGE = 100;
+    public static final int RESULT_OK = -1;
+
+    private void openGallery()
+    {
+        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        startActivityForResult(gallery,PICK_IMAGE);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, final Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
+            final Uri imageUri = data.getData();
+            image.setImageURI(imageUri);
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -51,6 +69,33 @@ public class AddActivity extends Fragment implements View.OnClickListener {
         title = fragmentView.findViewById(R.id.set_title);
         description = fragmentView.findViewById(R.id.set_short_description);
         addButton = fragmentView.findViewById(R.id.add_button);
+
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGallery();
+            }
+        });
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mtitle = title.getText().toString();
+                String mdescription = description.getText().toString();
+
+                if (mtitle.isEmpty()) {
+                    title.setError("Please enter the title of your advertisement!");
+                    title.requestFocus();
+                    return;
+                }
+                if (mdescription.isEmpty()) {
+                    description.setError("Please enter a short description of your advertisement!");
+                    description.requestFocus();
+                    return;
+                }
+                Toast.makeText(getContext(),"Advertisement added!",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return fragmentView;
     }

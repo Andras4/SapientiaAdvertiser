@@ -75,7 +75,7 @@ public class SettingsActivity extends Fragment implements View.OnClickListener {
 
         mStorageRef = FirebaseStorage.getInstance().getReference();
 
-        changePhoto = fragmentView.findViewById(R.id.sapilogo);
+        changePhoto = fragmentView.findViewById(R.id.change_profile_picture);
         signOut = fragmentView.findViewById(R.id.sign_out);
         save = fragmentView.findViewById(R.id.save_button);
         firstName = fragmentView.findViewById(R.id.change_first_name);
@@ -198,7 +198,7 @@ public class SettingsActivity extends Fragment implements View.OnClickListener {
                     riversRef.putFile(mImageUri);
                     myRef.child(userUID).child("UserImage").setValue(childRoute);
                 }
-                Toast.makeText(getContext(), "Profile updated", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Profile updated!", Toast.LENGTH_SHORT).show();
             }
         });
 
